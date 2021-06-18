@@ -1,9 +1,10 @@
-import React, { Component, useRef, useState } from 'react'
+import React, { Component, useRef, useState, useCallback } from 'react'
 import { SafeAreaView, View } from 'react-native'
 import WebView from 'react-native-webview'
 import Config from 'react-native-config'
 import styled from 'styled-components'
 import { Button } from 'react-native-paper'
+import { useFocusEffect } from '@react-navigation/native'
 
 import ReloadIcon from '../assets/icons/reload.png'
 import BackIcon from '../assets/icons/back.png'
@@ -29,9 +30,15 @@ const renderWebPage = (uri) => {
   const pageUrl = Config.MAIN_URL + uri
 
   const RELOAD_SCRIPT = `
-    window.location = '${pageUrl}';
+    if (window.location.href !== '${pageUrl}') {
+      window.location = '${pageUrl}';
+    }
     true;
   `
+  useFocusEffect(() => {
+    webRef.current.injectJavaScript(RELOAD_SCRIPT)
+    return () => {}
+  })
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
@@ -42,6 +49,7 @@ const renderWebPage = (uri) => {
         onMessage={(event) => { onMessage(event) }}
       />
 
+      {/* 暫不啟用
       <BottomView>
         <IconButton
           icon={BackIcon}
@@ -55,6 +63,7 @@ const renderWebPage = (uri) => {
           }}
         />
       </BottomView>
+      */}
     </SafeAreaView>
   )
 }

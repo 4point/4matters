@@ -57,6 +57,16 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
+
 # Vim
 *~
 *swp
+
+# others
+sync.sh
+scripts
+yarn.lock
+run.sh
+debugger.sh
+ios/Podfile.lock
+android/app/debug.keystore

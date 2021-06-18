@@ -13,11 +13,11 @@ export default function Index (navigation) {
   const [navIndex, setNavIndex] = useState(0)
 
   const routes = [
-    { key: 'home', title: '發現', icon: HomeIcon, color: '#3F51B5' },
-    { key: 'search', title: '搜尋', icon: SearchIcon, color: '#009688'  },
-    { key: 'tags', title: '標籤', icon: TagsIcon, color: '#795548'  },
-    { key: 'follow', title: '追蹤', icon: FollowIcon, color: '#607D8B' },
-    { key: 'login', title: '登入', icon: LoginIcon, color: '#3F51B5' },
+    { key: 'home', title: '發現', icon: HomeIcon, color: '#4D5BCD' },
+    { key: 'search', title: '搜尋', icon: SearchIcon, color: '#4D5BCD'  },
+    { key: 'tags', title: '標籤', icon: TagsIcon, color: '#4D5BCD'  },
+    { key: 'follow', title: '追蹤', icon: FollowIcon, color: '#4D5BCD' },
+    { key: 'login', title: '登入', icon: LoginIcon, color: '#4D5BCD' },
   ]
 
   const navigationState = {
