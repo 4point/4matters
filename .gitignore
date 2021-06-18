@@ -70,3 +70,6 @@ run.sh
 debugger.sh
 ios/Podfile.lock
 android/app/debug.keystore
+ios/Gemfile
+ios/Gemfile.lock
+ios/fastlane/

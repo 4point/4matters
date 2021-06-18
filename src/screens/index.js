@@ -17,7 +17,7 @@ export default function Index (navigation) {
     { key: 'search', title: '搜尋', icon: SearchIcon, color: '#4D5BCD'  },
     { key: 'tags', title: '標籤', icon: TagsIcon, color: '#4D5BCD'  },
     { key: 'follow', title: '追蹤', icon: FollowIcon, color: '#4D5BCD' },
-    { key: 'login', title: '登入', icon: LoginIcon, color: '#4D5BCD' },
+    { key: 'login', title: '我的', icon: LoginIcon, color: '#4D5BCD' },
   ]
 
   const navigationState = {
