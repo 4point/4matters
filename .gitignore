@@ -73,3 +73,5 @@ android/app/debug.keystore
 ios/Gemfile
 ios/Gemfile.lock
 ios/fastlane/
+android/gradle.properties
+android/app/build/
