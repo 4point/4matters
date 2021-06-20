@@ -99,6 +99,7 @@ const renderWebPage = (uri) => {
           injectedJavaScript={INJECTED_JAVASCRIPT}
           onShouldStartLoadWithRequest={(request) => handleRequest(request)}
           onMessage={(event) => { onMessage(event) }}
+          allowsBackForwardNavigationGestures={true}
         />
 
         <Portal>
