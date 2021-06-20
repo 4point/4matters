@@ -12,12 +12,14 @@ import LoginIcon from '../assets/icons/login.png'
 export default function Index (navigation) {
   const [navIndex, setNavIndex] = useState(0)
 
+  const THEME_COLOR = global.Config.THEME_COLOR
+
   const routes = [
-    { key: 'home', title: '發現', icon: HomeIcon, color: '#4D5BCD' },
-    { key: 'search', title: '搜尋', icon: SearchIcon, color: '#4D5BCD'  },
-    { key: 'tags', title: '標籤', icon: TagsIcon, color: '#4D5BCD'  },
-    { key: 'follow', title: '追蹤', icon: FollowIcon, color: '#4D5BCD' },
-    { key: 'login', title: '我的', icon: LoginIcon, color: '#4D5BCD' },
+    { key: 'home', title: '發現', icon: HomeIcon, color: THEME_COLOR },
+    { key: 'search', title: '搜尋', icon: SearchIcon, color: THEME_COLOR },
+    { key: 'tags', title: '標籤', icon: TagsIcon, color: THEME_COLOR },
+    { key: 'follow', title: '追蹤', icon: FollowIcon, color: THEME_COLOR },
+    { key: 'login', title: '我的', icon: LoginIcon, color: THEME_COLOR },
   ]
 
   const navigationState = {
@@ -43,4 +45,3 @@ export default function Index (navigation) {
     />
   )
 }
-
