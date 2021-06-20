@@ -4,7 +4,7 @@ import WebView from 'react-native-webview'
 import Config from 'react-native-config'
 import styled from 'styled-components'
 import { FAB, Portal, Provider, Button } from 'react-native-paper'
-import { openInbox } from 'react-native-email-link'
+import { openComposer } from 'react-native-email-link'
 import Share from 'react-native-share'
 
 import Icons from 'react-native-vector-icons/Ionicons'
@@ -64,11 +64,12 @@ const renderWebPage = (uri) => {
 
   const reportMail = () => {
     const data = {
-      title: currTitle,
-      message: '以下網址含有不當的內容：\n' + currUrl
+      to: global.Config.REPORT_MAIL,
+      subject: '[不當內容回報] ' + currTitle,
+      body: '以下網址含有不當的內容：\n' + currUrl
     }
 
-    openInbox(data)
+    openComposer(data)
   }
 
   const handleShare = async () => {
